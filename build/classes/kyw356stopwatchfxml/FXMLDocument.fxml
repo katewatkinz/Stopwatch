@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="320.0" prefWidth="425.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kyw356stopwatchfxml.FXMLDocumentController">
+    <children>
+        <Button id="1" fx:id="startButton" layoutX="331.0" layoutY="59.0" onAction="#handleStartButtonAction" text="Start" textAlignment="CENTER" textFill="#0d0202">
+         <font>
+            <Font name="Algerian" size="13.0" />
+         </font></Button>
+        <Button id="2" fx:id="stopButton" layoutX="331.0" layoutY="84.0" onAction="#handleStopButtonAction" prefHeight="25.0" prefWidth="59.0" text="Stop">
+         <font>
+            <Font name="Algerian" size="13.0" />
+         </font></Button>
+        <Button id="3" fx:id="resetButton" layoutX="331.0" layoutY="109.0" onAction="#handleResetButtonAction" prefHeight="25.0" prefWidth="59.0" text="Reset">
+         <font>
+            <Font name="Algerian" size="13.0" />
+         </font></Button>
+      <ImageView fitHeight="237.0" fitWidth="236.0">
+         <image>
+            <Image url="@clockdial2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hand" fitHeight="237.0" fitWidth="230.0" layoutX="3.0">
+         <image>
+            <Image url="@hand.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="84.0" layoutY="237.0" prefHeight="28.0" prefWidth="68.0">
+         <children>
+            <Label fx:id="titleLabel" prefHeight="17.0" prefWidth="109.0" text="00:00" textFill="#f2ecec">
+               <font>
+                  <Font name="Algerian" size="24.0" />
+               </font></Label>
+         </children>
+         <effect>
+            <ColorAdjust contrast="1.0" hue="1.0" saturation="1.0" />
+         </effect>
+      </HBox>
+    </children>
+</AnchorPane>
